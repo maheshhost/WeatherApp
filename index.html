@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Weather App</title>
+	<link rel="shortcut icon" href="favicon.ico" />	
+	<link rel="stylesheet" href="./assets/vendor/font/fontawesome-all.min.css">
+	<link rel="stylesheet" media="screen" href="./assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<!-- Start of the header -->
+		<header>
+			<div class="wrapper">
+				<h1>
+					<a href="index.html" title="WeatherSphere"><img src="./assets/images/weather.png" alt="weather app"></a>
+				</h1>	
+				<form action="#FIXME" method="GET" class="weather-form">
+					<input type="text" placeholder="enter city here..." id="weatherinput" class="weather-forminput">
+					<button type="submit" class="weatherbtn" id="btnsubmit">submit</button> 
+				</form>
+			</div>
+		</header>
+		<!-- end of header -->
+		<!-- Start of main -->
+		<main>
+			<div class="wrapper">
+				<!-- image display while data loading -->
+				<figure class="dnone" id="figure">
+					<img src="./assets/images/loading.gif" alt="loading image">
+				</figure>
+				<!-- image display while data loading -->
+				<!-- display data starts here  -->
+				<div class="datanone" id="datacontainer">
+					<!-- weather name starts here -->
+					<div class="weather__name">
+						<time class="time" id="time">1</time>
+						<span class="name" id="cityname">mahesh</span>
+						<span class="closebtn" id="close" title="close">&times;</span>
+					</div>
+					<!-- weather name ends here -->
+						<!-- weather data starts here -->
+					<div class="weather__data">
+						<div class="weather__temp">
+							<span class="temp__title">temperature (&#176;C)</span>
+							<span class="temp__value" id="temperature">20&#176;</span>
+							<span class="latitude">
+								<span class="latitude__lat" id="lat"></span>
+								<span class="latitude__lat" id="lon"></span>
+							</span>
+						</div>
+						<!-- weather data ends here -->
+						<!-- weatherinfo starts here -->
+						<ul class="weather__info">
+							<li>
+								<span class="weathername">pressure</span>
+								<span class="weathervalue" id="pressure">value</span>
+							</li>
+							<li>
+								<span class="weathername">humidity</span>
+								<span class="weathervalue" id="humidity">value</span>
+							</li>
+							<li>
+								<span class="weathername">temperature min - max (&#176;C)</span>
+								<span class="weathervalue">
+									<span id="mintemp">19 &#176; </span>to
+									<span id="maxtemp">20 &#176;</span>
+								</span>
+							</li>
+							<li>
+								<span class="weathername">wind</span>
+								<span class="weathervalue" id="wind">value</span>
+							</li>
+						</ul>
+						<!-- weatherinfo ends here -->
+					</div>
+				</div>
+				<!-- display data ends here -->
+			</div>
+			<!-- wrapper ends here -->
+		</main>
+		<!-- End of main -->
+		<!-- start of footer -->
+		<footer>
+		</footer>
+		<!-- end of footer -->
+	</div>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "WeatherBox",
+  "version": "1.0.0",
+  "description": "Weather display using openweatherapi",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "weather",
+    "temperature",
+    "wind speed"
+  ],
+  "author": "Mahesh Jaiswar",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^4.0.6"
+  }
+}

@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+  
+html { overflow-y: scroll; }
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+ /* ======= Your styling goes below ======= */
+/* Common styling  */
+* { 
+  box-sizing: border-box; 
+  transition: .1s ease-in-out;
+}
+
+body { background-color: #fff; }
+
+.wrapper {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  color: #333;
+  font-family: sans-serif;
+}
+
+ul { list-style-type: none; }
+
+img { 
+  width: 100%; 
+  outline: none;
+}
+/* Common styling  */
+/* header styling starts here */
+h1 {
+  width: 120px;
+  margin: 0 auto;
+}
+
+.weather-form {
+  width: 50%;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+.weather-forminput {
+  width: 67%;
+  padding: 1px 10px;
+  border: none;
+  border-bottom: 1px solid #333;
+  font: 18px/1.4 sans-serif;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.weatherbtn {
+  padding: 4px 12px;
+  border: 2px solid #333;
+  margin-left: 10px;
+  background-color: #fff;
+  color: #333;
+  font: 16px sans-serif; 
+  transition: .4s ease-in-out;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  border-radius: 2px;
+  letter-spacing: .5px;
+}
+
+.weatherbtn:hover {
+  background-color: #333;
+  color: #fff;
+} 
+/* header styling starts here */
+/* main styling start here */
+.figdisplay,
+.dnone {
+  max-width: 80px;
+  position: fixed;
+  top: 45%;
+  left: 45%;
+  transform: translateY(-50%, -50%);
+}
+
+.dnone { display: none; }
+
+.display__data,
+.datanone {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  margin-top: 45px;
+  display: flex;
+  color: #111;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 5px #333;
+  background-color: #fff;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+.datanone { display: none; }
+.display__data { display: block; }
+.sunny { background: #f1c40f; }
+.rain { background: #3498db; }
+.snow { background: #bdc3c7; }
+
+.weather__name {
+  display: flex;
+  font: 25px/1.4 sans-serif;
+  text-transform: capitalize;
+  flex-basis: 100%;
+}
+
+.time { flex-basis: 13%; }
+.name { flex-basis: 84%; }
+
+.closebtn {
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.weather__data {
+  margin-top: 20px;
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  flex-basis: 100%;
+}
+
+.weather__temp ,
+.weather__info { flex-basis: 50%; }
+
+.temp__title {
+  margin-top: 30px;
+  display: block;
+  font-size: 30px;
+}
+
+.temp__value {
+  margin-top: 20px;
+  font-size: 120px;
+  line-height: 1.5;
+}
+
+.weather__info li:not(:nth-child(1)) { margin-top: 30px; }
+
+.weathername {
+  display: block;
+  font-size: 21px;
+}
+
+.weathervalue {
+  margin-top: 5px;
+  display: block;
+}
+
+.latitude {
+  margin-top: 15px;
+  display: flex;
+  font: bold 16px/1.4 sans-serif;
+  text-align: start;
+  justify-content: space-evenly;
+}
+
+/* main styling start here */
+/* scrollbar */
+::-webkit-scrollbar { 
+  width: 5px;
+  background-color: inherit; 
+}
+
+::-webkit-scrollbar-track { border-radius: 10px; }
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb { background:  rgba(0, 0, 0, .2); }
+
+/* scrollbar */
