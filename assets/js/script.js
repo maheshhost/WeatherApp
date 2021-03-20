@@ -61,7 +61,7 @@ function dataUnHide() {
 // xhr request
 function weatherApiCall(query) {
   let xhr = new XMLHttpRequest();
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=32584f9b2071e046e42b2270153015b3`
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=32584f9b2071e046e42b2270153015b3`
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
